@@ -216,6 +216,7 @@ No modules.
 | <a name="input_node_os"></a> [node\_os](#input\_node\_os) | Operating system of worker nodes: EulerOS 2.5 or CentOS 7.7 (default: EulerOS 2.9) | `string` | `"EulerOS 2.9"` | no |
 | <a name="input_node_postinstall"></a> [node\_postinstall](#input\_node\_postinstall) | Post install script for the cluster ECS node pool. | `string` | `""` | no |
 | <a name="input_node_storage_encryption_enabled"></a> [node\_storage\_encryption\_enabled](#input\_node\_storage\_encryption\_enabled) | Enable OTC KMS volume encryption for the node pool volumes. (default: false) | `bool` | `false` | no |
+[node\_storage\_encryption\_only\_data\_volumes](#input\_node\_storage\_encryption\_only\_data\_volumes) | In some regions like eu-nl root image encryption is not yet available. When enabling this setting, encryption will only be applied to data_volumes. (default: false) | `bool` | `false` | no |
 | <a name="input_node_storage_encryption_kms_key_name"></a> [node\_storage\_encryption\_kms\_key\_name](#input\_node\_storage\_encryption\_kms\_key\_name) | If KMS volume encryption is enabled, specify a name of an existing kms key. Setting this disables the creation of a new kms key. (default: null) | `string` | `null` | no |
 | <a name="input_node_storage_size"></a> [node\_storage\_size](#input\_node\_storage\_size) | Size of the node system disk in GB (default: 100) | `number` | `100` | no |
 | <a name="input_node_storage_type"></a> [node\_storage\_type](#input\_node\_storage\_type) | Type of node storage SATA, SAS or SSD (default: SATA) | `string` | `"SATA"` | no |

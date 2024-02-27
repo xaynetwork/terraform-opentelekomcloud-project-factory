@@ -184,6 +184,12 @@ variable "node_storage_encryption_enabled" {
   default     = false
 }
 
+variable "node_storage_encryption_only_data_volumes" {
+  type        = bool
+  description = "In some regions like eu-nl root image encryption is not yet available. When enabling this setting, encryption will only be applied to data_volumes."
+  default     = false
+}
+
 variable "node_storage_encryption_kms_key_name" {
   type        = string
   description = "If KMS volume encryption is enabled, specify a name of an existing kms key. Setting this disables the creation of a new kms key. (default: null)"
