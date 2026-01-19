@@ -22,6 +22,7 @@ resource "opentelekomcloud_identity_role_v3" "bucket_access" {
       "obs:bucket:ListBucket",
       "obs:bucket:GetBucketLocation",
       "obs:bucket:ListBucketMultipartUploads",
+      "obs:bucket:ListBucketVersions",
     ]
   }
   statement {
