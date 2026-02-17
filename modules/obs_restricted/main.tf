@@ -22,6 +22,7 @@ resource "opentelekomcloud_obs_bucket" "bucket" {
   dynamic "logging" {
     for_each = var.logging_enabled ? [1] : []
     content {
+      agency        = var.logging_agency
       target_bucket = var.logging_target_bucket
       target_prefix = var.logging_target_prefix
     }

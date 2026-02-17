@@ -35,3 +35,9 @@ variable "logging_target_prefix" {
   type        = string
   default     = "log/"
 }
+
+variable "logging_agency" {
+  description = "The IAM agency name for OBS bucket logging permissions"
+  type        = string
+  default     = null
+}
