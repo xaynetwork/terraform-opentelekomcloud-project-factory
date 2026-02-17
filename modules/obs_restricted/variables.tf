@@ -17,3 +17,21 @@ variable "tags" {
   type    = map(string)
   default = null
 }
+
+variable "logging_enabled" {
+  description = "Enable OBS bucket logging"
+  type        = bool
+  default     = false
+}
+
+variable "logging_target_bucket" {
+  description = "The name of the bucket to receive the log objects"
+  type        = string
+  default     = ""
+}
+
+variable "logging_target_prefix" {
+  description = "The prefix for the log objects"
+  type        = string
+  default     = "log/"
+}
