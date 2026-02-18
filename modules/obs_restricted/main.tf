@@ -18,5 +18,15 @@ resource "opentelekomcloud_obs_bucket" "bucket" {
     algorithm  = "kms"
     kms_key_id = opentelekomcloud_kms_key_v1.bucket_kms_key.id
   }
+
+  dynamic "logging" {
+    for_each = var.logging_enabled ? [1] : []
+    content {
+      agency        = var.logging_agency
+      target_bucket = var.logging_target_bucket
+      target_prefix = var.logging_target_prefix
+    }
+  }
+
   tags = var.tags
 }
